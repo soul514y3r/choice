@@ -1,0 +1,194 @@
+import java.security.KeyRep;
+import java.util.Scanner;
+import java.util.Random;
+
+@SuppressWarnings("unused")
+public class choice {
+  public static final String ANSI_GREEN = "\u001B[32m";
+  public static final String ANSI_RESET = "\u001B[0m";
+  public static final String ANSI_PURPLE = "\u001B[35m";
+  static String menuItem;
+  static int aprice;
+  static double price1, price2, price3;
+
+  public static void main(String... args) throws InterruptedException {
+    try (Scanner scan = new Scanner(System.in)) {
+      Random rand = new Random();
+      int number = rand.nextInt(6) + 1;
+      System.out
+          .println(ANSI_GREEN + "Green = Teller " + ANSI_PURPLE + "Purple = Stranger " + ANSI_RESET + "White = You");
+      Thread.sleep(5000);
+      System.out.println("Enter your name:");
+      String first_name = scan.nextLine();
+      Thread.sleep(300);
+      System.out.println(ANSI_PURPLE + "Welcome " + first_name + ANSI_RESET);
+      aprice = 1700;
+      Thread.sleep(900);
+      System.out.println(ANSI_PURPLE + "We could really use some help " + ANSI_RESET);
+      Thread.sleep(1600);
+      System.out.println("1. Ok, 2. No 3. What 4. Go away");
+      int age = Integer.parseInt(scan.nextLine());
+      Thread.sleep(aprice);
+      switch (age) {
+        case 1:
+          System.out.println("Ok, I will do it");
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "Thank you" + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "We are trying to restore military order in The commonwealth" + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE
+              + "but a group of raiders have blocked our path to the Cambridge police station." + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "We want you to help us take it back. What do you say?" + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println("1. I will see what I can do 2. To difficult, I'm out");
+          int wha = Integer.parseInt(scan.nextLine());
+          switch (wha) {
+            case 1:
+              System.out.println("I will see what I can do");
+              Thread.sleep(aprice);
+              System.out.println(ANSI_PURPLE + "Good. Thanks again" + ANSI_RESET);
+              Thread.sleep(2000);
+              System.out.println(
+                  ANSI_GREEN + "You wander towards the police station, but find a fire a bit of the road" + ANSI_RESET);
+              Thread.sleep(aprice);
+              System.out.println("1. Continue on the road 2. investigate the fire");
+              int nah = Integer.parseInt(scan.nextLine());
+              Thread.sleep(aprice);
+              switch (nah) {
+                case 1:
+                  System.out.println(ANSI_GREEN + "You get ambushed on the road by the raiders and die" + ANSI_RESET);
+                  break;
+                case 2:
+                  System.out.println(
+                      ANSI_GREEN + "You find the raiders! You ambush them, before it is to late." + ANSI_RESET);
+                  Thread.sleep(aprice);
+
+                  System.out.println("Rolling dice(against odds):");
+                  Thread.sleep(4000);
+
+                  switch (number) {
+                    case 1:
+                      System.out.println("Roll failed.");
+                      Thread.sleep(aprice);
+                      break;
+
+                    case 2:
+                      System.out.println("Roll failed.");
+                      Thread.sleep(aprice);
+                      break;
+
+                    case 3:
+                      System.out.println("Roll failed.");
+                      Thread.sleep(1200);
+                      System.out.println(ANSI_GREEN + "You die trying to ambush the raiders" + ANSI_RESET);
+                      break;
+
+                    case 4:
+                      System.out.println("Roll failed.");
+                      Thread.sleep(aprice);
+                      break;
+
+                    case 5:
+                      System.out.println("Roll failed.");
+                      Thread.sleep(aprice);
+                      break;
+
+                    case 6:
+                      System.out.println("Roll successful.");
+                      Thread.sleep(aprice);
+                      System.out.println(
+                          ANSI_GREEN + "You successfully ambush the raiders and return to the stranger"
+                              + ANSI_RESET);
+                      Thread.sleep(aprice);
+                      System.out.println("I took care of the raiders that were giving you trouble.");
+                      Thread.sleep(aprice);
+                      System.out.println(ANSI_PURPLE
+                          + "Thank you, I know it is not a lot, but here, take my rifle. May it serve you well in battle"
+                          + ANSI_RESET);
+                      Thread.sleep(aprice);
+                      System.out.println(ANSI_GREEN + "Good ending" + ANSI_RESET);
+                      Thread.sleep(4000);
+                      break;
+
+                  }
+
+                  break;
+
+                default:
+                  System.out.println("Unkown option. Exiting");
+                  break;
+
+              }
+
+              break;
+            default:
+              System.out.println("Unkown option. Exiting");
+              break;
+          }
+          break;
+        default:
+          System.out.println("Unkown option. Exiting");
+          break;
+
+        case 2:
+
+          break;
+
+        case 3:
+          System.out.println("Sorry, I didn't hear");
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "We need help from you" + ANSI_RESET);
+
+          break;
+        case 4:
+
+          break;
+        case 5:
+          System.out.println(ANSI_GREEN + "You fall to the floor." + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(ANSI_GREEN + "You wake up in a dungeon" + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "Awake at last, I see." + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println("Who was that?");
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "Do not fear. I mean no harm." + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(
+              ANSI_PURPLE + "I only wonder how you got here. This place is filled with mystical wonders" + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println(ANSI_PURPLE + "that you cannot understand. Follow me, I will show you." + ANSI_RESET);
+          Thread.sleep(aprice);
+          System.out.println("1. Ok 2. Run away");
+          int yuh = Integer.parseInt(scan.nextLine());
+          Thread.sleep(aprice);
+          switch (yuh) {
+            case 1:
+              System.out.println("Ok, lead the way.");
+              Thread.sleep(aprice);
+              System.out.println(ANSI_GREEN
+                  + "You follow the stranger to a tunnel. You walk the tunnel in silence. After a" + ANSI_RESET);
+              Thread.sleep(aprice);
+              System.out.println(ANSI_GREEN
+                  + "while you see a prison cell in front of you. In the middle of it, you see a sword" + ANSI_RESET);
+              Thread.sleep(aprice);
+              System.out.println("1. Pick up the sword 2. Ignore the sword");
+              int yot = Integer.parseInt(scan.nextLine());
+              Thread.sleep(aprice);
+              break;
+            case 2:
+
+              break;
+            default:
+              System.out.println("Unkown option. Exiting");
+              break;
+          }
+          break;
+
+      }
+    }
+  }
+
+}
