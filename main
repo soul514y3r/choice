@@ -7,6 +7,7 @@ public class choice {
   public static final String ANSI_GREEN = "\u001B[32m";
   public static final String ANSI_RESET = "\u001B[0m";
   public static final String ANSI_PURPLE = "\u001B[35m";
+  public static final String ANSI_YELLOW = "\u001B[33m";
   static String menuItem;
   static int aprice;
   static double price1, price2, price3;
@@ -16,7 +17,7 @@ public class choice {
       Random rand = new Random();
       int number = rand.nextInt(6) + 1;
       System.out
-          .println(ANSI_GREEN + "Green = Teller " + ANSI_PURPLE + "Purple = Stranger " + ANSI_RESET + "White = You");
+          .println(ANSI_GREEN + "Green = Teller " + ANSI_PURPLE + "Purple = Stranger "+ANSI_YELLOW+"Yellow = Known " + ANSI_RESET + "White = You");
       Thread.sleep(5000);
       System.out.println("Enter your name:");
       String first_name = scan.nextLine();
@@ -72,11 +73,13 @@ public class choice {
                     case 1:
                       System.out.println("Roll failed.");
                       Thread.sleep(aprice);
+                      System.out.println(ANSI_GREEN+"Your clumsy movement gets you killed"+ANSI_RESET);
                       break;
 
                     case 2:
                       System.out.println("Roll failed.");
                       Thread.sleep(aprice);
+                      System.out.println(ANSI_GREEN+"You get ambushed from behind and die"+ANSI_RESET);
                       break;
 
                     case 3:
@@ -88,11 +91,13 @@ public class choice {
                     case 4:
                       System.out.println("Roll failed.");
                       Thread.sleep(aprice);
+                      System.out.println(ANSI_GREEN+"You take one down, but the others killed you"+ANSI_RESET);
                       break;
 
                     case 5:
                       System.out.println("Roll failed.");
                       Thread.sleep(aprice);
+                      System.out.println(ANSI_GREEN+"You kill all raiders, except one that kills you"+ANSI_RESET);
                       break;
 
                     case 6:
@@ -177,6 +182,68 @@ public class choice {
               System.out.println("1. Pick up the sword 2. Ignore the sword");
               int yot = Integer.parseInt(scan.nextLine());
               Thread.sleep(aprice);
+              switch (yot) {
+                case 1:
+                System.out.println(ANSI_GREEN+"You pick up the sword. You fell calm and safe in its presence"+ANSI_RESET); 
+                Thread.sleep(aprice);
+                System.out.println(ANSI_PURPLE+"Ah, I see you have found yourself with one of the sacred blades that lies down"+ANSI_RESET);
+                Thread.sleep(aprice);
+                System.out.println(ANSI_PURPLE+"here. They are harder than japanese steel and as light as a feather. A magnificent"+ANSI_RESET);
+                Thread.sleep(aprice);
+System.out.println(ANSI_PURPLE+"weapon. I beileve that one is called '魂刃' or 'Soul blade' in the modern language"+ANSI_RESET);
+Thread.sleep(aprice);
+System.out.println("Speaking of names, what is your name?");
+Thread.sleep(aprice);
+System.out.println(ANSI_PURPLE+"I am called Will by my friends"+ANSI_RESET);
+Thread.sleep(aprice);
+System.out.println(ANSI_YELLOW+"If you want you could put that blade to use and help me"+ANSI_RESET);
+Thread.sleep(aprice);
+System.out.println("1. sure 2. no");
+int wuy = Integer.parseInt(scan.nextLine());
+Thread.sleep(aprice);
+switch (wuy) {
+  case 1:
+  System.out.println("Sure, why not.");
+  Thread.sleep(aprice);
+  System.out.println(ANSI_YELLOW+"perfect. You only have to go a little bit farther down the tunnel. There,"+ANSI_RESET);
+  Thread.sleep(aprice);
+  System.out.println(ANSI_YELLOW+"You will find an infestation of mutated rats. If you come back with them all slain, I"+ANSI_RESET);
+  Thread.sleep(aprice);
+  System.out.println(ANSI_YELLOW+"Shall reward you. What do you say?"+ANSI_RESET);
+  Thread.sleep(aprice);
+  System.out.println("1. with pleasure 2. Mutated rats!(forfeit)");
+  int op = Integer.parseInt(scan.nextLine());
+  Thread.sleep(aprice);
+  switch (op) {
+    case 1:
+    System.out.println("With pleasure.");
+    Thread.sleep(aprice);
+    System.out.println(ANSI_GREEN+"You continue down the tunnel until you find "+ANSI_RESET);
+    break;
+    case 2:
+    System.out.println("Mutated rats! hell no.");
+    break;
+    default:
+    System.out.println("Unknown option. Exiting");
+    break;
+  }
+  break;
+  case 2:
+  System.out.println("No , not really.");
+  Thread.sleep(aprice);
+  System.out.println(ANSI_YELLOW+"Bye then."+ANSI_RESET);
+  break;
+  default:
+  System.out.println("Unkown option. Exiting");
+  break;
+}
+                break;
+                case 2:
+                break;
+                default:
+              System.out.println("Unkown option. Exiting");
+              break;
+              }
               break;
             case 2:
 
