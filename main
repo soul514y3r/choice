@@ -281,7 +281,7 @@ public class choice {
   }
 
   private static void death() {
-
+//Thank you Edvin!
     Random wel = new Random();
     int number = wel.nextInt(5) + 1;
     {
